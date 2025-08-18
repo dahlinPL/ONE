@@ -26,17 +26,9 @@ namespace hermes
 static constexpr const char *kTermColorRedTextCode = "\033[0;31m";
 static constexpr const char *kTermColorGreenTextCode = "\033[0;32m";
 static constexpr const char *kTermColorOrangeTextCode = "\033[0;33m";
-static constexpr const char *kTermColorBlueTextCode = "\033[0;34m";
-static constexpr const char *kTermColorMagentaTextCode = "\033[0;35m";
-static constexpr const char *kTermColorCyanTextCode = "\033[0;36m";
-static constexpr const char *kTermColorWhiteTextCode = "\033[0;37m";
 
 static constexpr const char *kTermBoldTextCode = "\033[1m";
 static constexpr const char *kTermUnderlineTextCode = "\033[4m";
-static constexpr const char *kTermInverseTextCode = "\033[7m";
-static constexpr const char *kTermBoldOffTextCode = "\033[21m";
-static constexpr const char *kTermUnderlineOffTextCode = "\033[24m";
-static constexpr const char *kTermInverseOffTextCode = "\033[27m";
 
 static constexpr const char *kTermColorResetAllCode = "\033[0m";
 

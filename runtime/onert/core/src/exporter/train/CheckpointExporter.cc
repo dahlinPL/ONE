@@ -51,6 +51,7 @@ struct DataBuffer
   void setData(const char *data, uint32_t size)
   {
     assert(_offset_it != _offset.end());
+    #pragma clang diagnostic ignored "-Wsign-compare"
     assert(_data_ptr - _data.data() + size <= _data.size());
 
     *_offset_it++ = _start_offset;

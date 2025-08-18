@@ -78,6 +78,7 @@ TEST_F(mio_circle08_helper_test, v08_NEG)
   // BuiltinOperator_ADD = 0
   // BuiltinOperator_CUMSUM = 128
   // deprecated_builtin_code cannot be negative value
+  #pragma clang diagnostic ignored "-Wconstant-conversion"
   add_operator_code(128, "", circle::BuiltinOperator_ADD);
   initialization_finish();
 
@@ -101,6 +102,7 @@ TEST_F(mio_circle08_helper_test, v08_under127_NEG)
   // BuiltinOperator_CONV_2D = 3
   // BuiltinOperator_CUMSUM = 128
   // deprecated_builtin_code cannot be negative value
+   #pragma clang diagnostic ignored "-Wconstant-conversion"
   add_operator_code(128, "", circle::BuiltinOperator_CONV_2D);
   initialization_finish();
 
@@ -123,6 +125,7 @@ TEST_F(mio_circle08_helper_test, v08_custom_NEG)
 {
   // BuiltinOperator_CUMSUM = 128
   // deprecated_builtin_code cannot be negative value
+   #pragma clang diagnostic ignored "-Wconstant-conversion"
   add_operator_code(128, "custom", circle::BuiltinOperator_CUSTOM);
   initialization_finish();
 
@@ -146,6 +149,7 @@ TEST_F(mio_circle08_helper_test, v08_over127_NEG)
 {
   // BuiltinOperator_CUMSUM = 128
   // deprecated_builtin_code cannot be negative value
+   #pragma clang diagnostic ignored "-Wconstant-conversion"
   add_operator_code(128, "", circle::BuiltinOperator_CUMSUM);
   initialization_finish();
 

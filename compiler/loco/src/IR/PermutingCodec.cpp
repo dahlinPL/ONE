@@ -29,7 +29,7 @@ namespace
 
 using loco::FeatureAxis;
 
-inline bool valid(const FeatureAxis &axis)
+[[maybe_unused]] bool valid(const FeatureAxis &axis)
 {
   switch (axis)
   {
@@ -193,7 +193,7 @@ namespace
 
 using loco::FilterAxis;
 
-inline bool valid(const FilterAxis &axis)
+[[maybe_unused]] bool valid(const FilterAxis &axis)
 {
   switch (axis)
   {
@@ -212,7 +212,7 @@ inline bool valid(const FilterAxis &axis)
   return false;
 }
 
-inline bool valid(const loco::Permutation<loco::Domain::Filter> &perm)
+[[maybe_unused]] bool valid(const loco::Permutation<loco::Domain::Filter> &perm)
 {
   auto check = [&perm](FilterAxis axis_f) {
     if (!perm.mapped(axis_f))
@@ -346,7 +346,7 @@ namespace
 
 using loco::DepthwiseFilterAxis;
 
-inline bool valid(const DepthwiseFilterAxis &axis)
+[[maybe_unused]] bool valid(const DepthwiseFilterAxis &axis)
 {
   switch (axis)
   {
@@ -500,7 +500,7 @@ namespace
 
 using loco::MatrixAxis;
 
-inline bool valid(const MatrixAxis &axis)
+[[maybe_unused]] bool valid(const MatrixAxis &axis)
 {
   switch (axis)
   {

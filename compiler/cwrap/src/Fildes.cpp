@@ -23,12 +23,12 @@ namespace
 {
 
 /**
- * @note  making inline to this function will prevent unused function error
+ * @note  maybe_unused to prevent unused function error
  *        as error_value() is used only inside assert()
  */
-inline bool error_value(int fd) { return fd == -1; }
+[[maybe_unused]] bool error_value(int fd) { return fd == -1; }
 
-inline bool valid_value(int fd) { return fd >= 0; }
+[[maybe_unused]] bool valid_value(int fd) { return fd >= 0; }
 
 } // namespace
 

@@ -84,6 +84,7 @@ TEST_F(mio_tflite2121_helper_test, v3_NEG)
   // BuiltinOperator_ADD = 0
   // BuiltinOperator_CUMSUM = 128
   // deprecated_builtin_code cannot be negative value
+   #pragma clang diagnostic ignored "-Wconstant-conversion"
   add_operator_code(128, "", tflite::BuiltinOperator_ADD);
   initialization_finish();
 
@@ -129,6 +130,7 @@ TEST_F(mio_tflite2121_helper_test, v3a_custom_NEG)
 {
   // BuiltinOperator_CUMSUM = 128
   // deprecated_builtin_code cannot be negative value
+   #pragma clang diagnostic ignored "-Wconstant-conversion"
   add_operator_code(128, "custom", tflite::BuiltinOperator_CUSTOM);
   initialization_finish();
 
@@ -152,6 +154,7 @@ TEST_F(mio_tflite2121_helper_test, v3a_over127_NEG)
 {
   // BuiltinOperator_CUMSUM = 128
   // deprecated_builtin_code cannot be negative value
+   #pragma clang diagnostic ignored "-Wconstant-conversion"
   add_operator_code(128, "", tflite::BuiltinOperator_CUMSUM);
   initialization_finish();
 

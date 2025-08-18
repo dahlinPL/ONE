@@ -27,10 +27,10 @@ namespace
 /**
  * @note  This function is currently only used in assert. Compiler will
  *        warn/error this function as unused in Release build.
- *        Making inline will make compiler happy.
+ *        Making [[maybe_unused]] will make compiler happy.
  */
 // Is it possible to update lhs as rhs?
-inline bool dtype_assignable(loco::DataType lhs, loco::DataType rhs)
+[[maybe_unused]] bool dtype_assignable(loco::DataType lhs, loco::DataType rhs)
 {
   if (lhs == loco::DataType::Unknown)
   {

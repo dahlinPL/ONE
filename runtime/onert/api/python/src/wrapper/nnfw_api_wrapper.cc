@@ -285,18 +285,21 @@ float NNFW_SESSION::train_get_loss(uint32_t index)
 
 void NNFW_SESSION::train_export_circle(const py::str &path)
 {
+  #pragma clang diagnostic ignored "-Wdangling-gsl"
   const char *c_str_path = path.cast<std::string>().c_str();
   ensure_status(nnfw_train_export_circle(session, c_str_path));
 }
 
 void NNFW_SESSION::train_import_checkpoint(const py::str &path)
 {
+  #pragma clang diagnostic ignored "-Wdangling-gsl"
   const char *c_str_path = path.cast<std::string>().c_str();
   ensure_status(nnfw_train_import_checkpoint(session, c_str_path));
 }
 
 void NNFW_SESSION::train_export_checkpoint(const py::str &path)
 {
+  #pragma clang diagnostic ignored "-Wdangling-gsl"
   const char *c_str_path = path.cast<std::string>().c_str();
   ensure_status(nnfw_train_export_checkpoint(session, c_str_path));
 }
