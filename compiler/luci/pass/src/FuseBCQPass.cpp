@@ -111,7 +111,8 @@ template <int32_t V> class BCQFuser;
 template <> class BCQFuser<1>
 {
 public:
-  BCQFuser<1>(int32_t original_output_cnt, int32_t bundle_cnt)
+ // -Werror=template-id-cdtor
+  BCQFuser(int32_t original_output_cnt, int32_t bundle_cnt)
     : _original_output_cnt{original_output_cnt}, _bundle_cnt{bundle_cnt}
   {
     // Do nothing
